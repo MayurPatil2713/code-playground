@@ -15,6 +15,6 @@ class DemoClass {
         aobj.genericPrint("Joy with Java"); 
 
         // Calling generic method with a Double argument (auto-boxed from double)
-        aobj.genericPrint(3.1412343); 
+        aobj.genericPrint(3.1412343);
     }
 }
