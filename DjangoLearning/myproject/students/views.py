@@ -5,7 +5,10 @@ def home(request):
     return HttpResponse("Hello, Django!")
 
 def about(request):
-    return HttpResponse("This is my first Django project.")
-
-
+    context = {
+    "name":"Mayur",
+    "course":"MCA",
+    "is_student" : True,
+}
+    return render(request, "students/about.html", context)
 

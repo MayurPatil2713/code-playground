@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+</head>
+<body>
+    {% if is_student %}
+        <h1>You are a student Hello, {{ name }}! Course:{{course}}</h1>
+        <p>Welcome to Django.You are Learning web development.</p>
+    {% else %}
+        <h1>You are not a student</h1>
+    {% endif %}
+    
+</body>
+</html>
