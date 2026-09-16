@@ -4,11 +4,11 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse("Hello, Django!")
 
+
 def about(request):
+    students = ["Amit", "Rahul", "Sneha"]
     context = {
-    "name":"Mayur",
-    "course":"MCA",
-    "is_student" : True,
-}
+        "students":students
+    }
     return render(request, "students/about.html", context)
 

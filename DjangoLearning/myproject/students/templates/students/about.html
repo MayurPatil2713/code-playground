@@ -4,12 +4,13 @@
     <title>About</title>
 </head>
 <body>
-    {% if is_student %}
-        <h1>You are a student Hello, {{ name }}! Course:{{course}}</h1>
-        <p>Welcome to Django.You are Learning web development.</p>
-    {% else %}
-        <h1>You are not a student</h1>
-    {% endif %}
-    
+    <ul>
+        {% for student in students %}
+        <li>
+            {{ forloop.counter }}. {{ student }} 
+            <!-- {{ forloop.counter0 }} -> starts at 0 -->
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
