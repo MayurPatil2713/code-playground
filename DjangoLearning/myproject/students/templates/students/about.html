@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
     <title>About</title>
 </head>
 <body>
-    <ul>
-        {% for student in students %}
-        <li>
-            {{ forloop.counter }}. {{ student }} 
-            <!-- {{ forloop.counter0 }} -> starts at 0 -->
-        </li>
-        {% endfor %}
-    </ul>
+    <h1>CSS file</h1>
 </body>
 </html>
