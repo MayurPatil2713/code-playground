@@ -4,6 +4,12 @@
         <title>Student List</title>
     </head>
     <body>
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        
         <h1>Student List</h1>
         <table border="1">
             <tr>
@@ -19,6 +25,12 @@
                 <td>{{ student.age }}</td>
                 <td>{{ student.email }}</td>
                 <td>{{ student.course }}</td>
+                <td>
+                    <a href="{% url 'student_edit' student.id %}">Edit</a>
+                </td>
+                <td>
+                    <a href="{% url 'student_delete' student.id %}">Delete</a>
+                </td>
             </tr>
             {% endfor %}
 
